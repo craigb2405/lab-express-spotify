@@ -1,0 +1,31 @@
+  
+   
+    {{#if returnedResult}}
+
+        <h1>Is this the artist you were searching for:</h1>
+
+ 
+
+    {{#each returnedResult}}
+
+   <div id="results">
+
+  
+
+    {{name}}
+    <br>
+    {{genres}}
+    <br>
+    <a href="{{external_urls.spotify}}">{{name}}</a>
+
+    <br>
+
+    {{/each}}
+
+    {{else}}
+
+    <h2>Sorry we cannot find an artist with that information</h2>
+
+    {{/if}}
+
+    </div>

@@ -1,0 +1,14 @@
+.container {
+    background-image: "/public/images/spotify-background.jpeg";
+}
+
+#results {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    gap: 10px;
+}
+
