@@ -10,5 +10,12 @@
     border-color: black;
     border-style: solid;
     gap: 10px;
+
+}
+
+#indResult {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
 }
 

@@ -1,24 +1,29 @@
   
    
+
+    
     {{#if returnedResult}}
 
         <h1>Is this the artist you were searching for:</h1>
 
- 
+       <div id="results"> 
 
     {{#each returnedResult}}
 
-   <div id="results">
 
+    <div id="indResult">
+<img src="{{images.1.url}}">
   
 
-    {{name}}
+    <a href="{{external_urls.spotify}}">{{name}}</a>
     <br>
     {{genres}}
     <br>
-    <a href="{{external_urls.spotify}}">{{name}}</a>
+    <button>View Albums</button>
+    
 
     <br>
+    </div>
 
     {{/each}}
 
