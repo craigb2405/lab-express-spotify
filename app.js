@@ -40,7 +40,19 @@ app.get('/artist-search', (req, res, next)=>{
     
 })
 
+app.get('/albums/:artistId', (req, res, next) => {
+  spotifyApi.getArtistAlbums(req.params.artistId)
+  .then(albums => albums.body.items)
+  .then(returnedAlbums=>res.render('albums', {returnedAlbums}))
+  .catch(err=>console.log('The error while getting Artists Albums: ', err))
+});
 
+app.get('/tracks/:albumId', (req, res, next) => {
+  spotifyApi.getAlbumTracks(req.params.albumId)
+  .then(tracks => tracks.body.items)
+  .then(returnedTracks=>res.render('tracks', {returnedTracks}))
+  .catch(err=>console.log('The error while getting Album Tracks: ', err))
+});
    
 
 

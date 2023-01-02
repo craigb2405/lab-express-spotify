@@ -1,8 +1,5 @@
   
-   
-
-    
-    {{#if returnedResult}}
+   {{#if returnedResult}}
 
         <h1>Is this the artist you were searching for:</h1>
 
@@ -12,17 +9,15 @@
 
 
     <div id="indResult">
-<img src="{{images.1.url}}">
-  
+    <img src="{{images.1.url}}">
+        <div class="indResultBottom">
 
-    <a href="{{external_urls.spotify}}">{{name}}</a>
-    <br>
-    {{genres}}
-    <br>
-    <button>View Albums</button>
+    <a class="bandName" href="{{external_urls.spotify}}">{{name}}</a>
     
+    <a class="viewAlbumsButton" href="/albums/{{id}}">View Albums</a>
+    </div>
 
-    <br>
+    
     </div>
 
     {{/each}}

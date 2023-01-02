@@ -1,0 +1,45 @@
+  
+
+    
+    {{#if returnedTracks}}
+
+      <table id="tracksHeading">
+        <tr>
+            <td>
+        Title
+      </td> 
+      <td id="listen">
+        Listen
+      </td> 
+        </tr>
+      </table>
+       
+
+    {{#each returnedTracks}}
+<div id="tracksTable">
+
+    
+      <table>
+        <tr>
+            <td>{{name}}</td>
+            <td><audio controls src="{{preview_url}}"></audio></td>
+        </tr>
+      </table> 
+     
+      
+  
+
+       
+
+     
+
+    {{/each}}
+   
+</div>
+    {{else}}
+
+    <h2>Sorry we cannot find any albums with that information</h2>
+
+    {{/if}}
+
+  

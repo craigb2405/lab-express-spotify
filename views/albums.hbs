@@ -1,0 +1,36 @@
+  
+
+    
+    {{#if returnedAlbums}}
+<h1>Albums for: Artist Name</h1>
+        
+
+       <div id="results"> 
+
+    {{#each returnedAlbums}}
+
+
+    <div id="indResult">
+       
+       <img src="{{images.0.url}}">
+  
+
+    <br>
+    {{name}}
+    <br>
+    <a href="/tracks/{{id}}">View Tracks</a>
+   
+    
+
+    <br>
+    </div>
+
+    {{/each}}
+
+    {{else}}
+
+    <h2>Sorry we cannot find any albums with that information</h2>
+
+    {{/if}}
+
+    </div>
